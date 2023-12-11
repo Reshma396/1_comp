@@ -35,7 +35,8 @@
     box-sizing: border-box
 }
 
-html {
+
+/* html {
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -46,7 +47,7 @@ html {
 
 @-ms-viewport {
     width: device-width
-}
+} */
 
 figcaption,
 figure,
@@ -131,8 +132,8 @@ a {
 }
 
 a:hover {
-    color: #0056b3;
-    text-decoration: underline
+    color: #e2e5e8;
+    text-decoration: none
 }
 
 a:not([href]):not([tabindex]) {

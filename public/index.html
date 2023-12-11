@@ -6,76 +6,17 @@
     <!-- <meta name="theme-color" content="#000000" /> -->
     <meta name="description" content=""/>
     <title>One Compliance</title>
-    <!-- <link rel="shortcut icon" href="/assets/frappe/images/frappe-favicon.svg" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="\favicon 1.ico" type="image/x-icon">
 	 <!-- <link rel="canonical" href="https://frappehealth.com/home"> -->
     <link rel="stylesheet" href="style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
     
-  <body>
+  <body onload="get_testimonials();">
+    
     <div id="root"></div>
-    <!-- <script nonce="cac44418-eb20-406b-bfbc-1d025f1afb5d">
-        (function(w, d) {
-            ! function(bb, bc, bd, be) {
-                bb[bd] = bb[bd] || {};
-                bb[bd].executed = [];
-                bb.zaraz = {
-                    deferred: [],
-                    listeners: []
-                };
-                bb.zaraz.q = [];
-                bb.zaraz._f = function(bf) {
-                    return async function() {
-                        var bg = Array.prototype.slice.call(arguments);
-                        bb.zaraz.q.push({
-                            m: bf,
-                            a: bg
-                        })
-                    }
-                };
-                for (const bh of ["track", "set", "debug"]) bb.zaraz[bh] = bb.zaraz._f(bh);
-                bb.zaraz.init = () => {
-                    var bi = bc.getElementsByTagName(be)[0],
-                        bj = bc.createElement(be),
-                        bk = bc.getElementsByTagName("title")[0];
-                    bk && (bb[bd].t = bc.getElementsByTagName("title")[0].text);
-                    bb[bd].x = Math.random();
-                    bb[bd].w = bb.screen.width;
-                    bb[bd].h = bb.screen.height;
-                    bb[bd].j = bb.innerHeight;
-                    bb[bd].e = bb.innerWidth;
-                    bb[bd].l = bb.location.href;
-                    bb[bd].r = bc.referrer;
-                    bb[bd].k = bb.screen.colorDepth;
-                    bb[bd].n = bc.characterSet;
-                    bb[bd].o = (new Date).getTimezoneOffset();
-                    if (bb.dataLayer)
-                        for (const bo of Object.entries(Object.entries(dataLayer).reduce(((bp, bq) => ({ ...bp[1],
-                                ...bq[1]
-                            })), {}))) zaraz.set(bo[0], bo[1], {
-                            scope: "page"
-                        });
-                    bb[bd].q = [];
-                    for (; bb.zaraz.q.length;) {
-                        const br = bb.zaraz.q.shift();
-                        bb[bd].q.push(br)
-                    }
-                    bj.defer = !0;
-                    for (const bs of [localStorage, sessionStorage]) Object.keys(bs || {}).filter((bu => bu.startsWith("_zaraz_"))).forEach((bt => {
-                        try {
-                            bb[bd]["z_" + bt.slice(7)] = JSON.parse(bs.getItem(bt))
-                        } catch {
-                            bb[bd]["z_" + bt.slice(7)] = bs.getItem(bt)
-                        }
-                    }));
-                    bj.referrerPolicy = "origin";
-                    bj.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(bb[bd])));
-                    bi.parentNode.insertBefore(bj, bi)
-                };
-                ["complete", "interactive"].includes(bc.readyState) ? zaraz.init() : bb.addEventListener("DOMContentLoaded", zaraz.init)
-            }(w, d, "zarazData", "script");
-        })(window, document);
-    </script> -->
+
     <script src="maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
     <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -92,6 +33,7 @@
     <script src="js/default-assets/active.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -105,6 +47,31 @@
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"81e9d584fe964c11","version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
         crossorigin="anonymous"></script>
 
-   
+    <script>
+      function get_testimonials() {
+        jQuery.ajax({
+          url: "https://onecompliance.frappe.cloud/api/method/get_testimonials",
+          type: "GET",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          Credential: "include",
+          cookie: "sid=Guest; system_user=no; full_name=Guest; user_id=Guest; user_image=",
+          success: function (response) {
+            const apiResult = response.data
+            console.log('apiResult : ', apiResult);
+            const container = document.getElementById('testimonial_list');
+            
+      
+              },
+              error: function (xhr, status, error) {
+                console.error(error);
+                console.log('error');
+              }
+            });
+          }
+    </script>
+      
   </body>
 </html>

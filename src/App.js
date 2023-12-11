@@ -6,16 +6,22 @@ import { BrowserRouter as Router, Routes, Route }
 	from 'react-router-dom';
 import Home from './pages';
 import Doc from './pages/doc';
-import Contact from './pages/contact';
+import KeyFeatures from './pages/key_features';
+import Pricing from './pages/pricing';
+
 
 function App() {
+	
 	return (
 		<Router>
 			<Navbar />
 			<Routes>
 				<Route exact path='/' element={<Home />} />
 				<Route path='/doc' element={<Doc />} />
-				<Route path='/contact' element={<Contact />} />
+				<Route path='/key_features' element={<KeyFeatures />} />
+				<Route path='/pricing' element={<Pricing />} />
+
+
 			</Routes>
 		</Router>
 	);

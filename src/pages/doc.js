@@ -24,10 +24,9 @@ export default function Docs() {
             </div>
           </div>
         </div>
-
         {/* -------------------------
-                * Header Section *
-            ------------------------- */}
+            * Header Section *
+          ------------------------- */}
       <header className="header-area">
         <div className="main-header-area">
           <div className="classy-nav-container breakpoint-off">
@@ -41,20 +40,13 @@ export default function Docs() {
                   <div className="cross-wrap"><span className="top" /><span className="bottom" /></div>
                 </div>
                 <div className="classynav">
-                  <ul id="nav"  style={{width: '19pc'}}>
-                    <li><a href="#features">About</a>
-                      {/* <ul className="dropdown">
-                        <li><a href="https://frappeframework.com/docs/user/en/introduction"> About frappe</a></li>
-                        <li><a href="#why_compliance"> Why One Compliance</a></li>
-                        <li><a href="https://efeone.com/"> Vision</a></li>
-                        <li><a href="https://efeone.com/"> Team</a></li>
-                      </ul> */}
-                    </li>
-                    {/* <li><a href>Pricing</a></li> */}
+                  <ul id="nav"  style={{width: '23pc'}}>
+                    <li><a href="/index">About</a></li>
+                    <li><a href='/pricing'>Pricing</a></li>
                     <li><a href='/doc'>Doc</a></li>
-                    <li><a href='/contact'>Contact Us</a></li>
+                    <li><a href='#dk-footer'>Contact Us</a></li>
                   </ul>
-                  <div className="get-a-quote ml-4 mr-3" style={{width: '15%'}}>
+                  <div className="get-a-quote ml-4 mr-3" style={{width: '10%'}}>
                   <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
                     <img src="./img/bg-img/GitHub-Mark-ea2971cee799" alt="" ></img>
                     {/* <a href="https://github.com/efeone/one_compliance" >&nbsp; </a> */}
@@ -69,13 +61,18 @@ export default function Docs() {
 
 
       <div className="lil-pt-12 lil-pb-24 hero-parent sm:lil-pb-8 sm:lil-pt-8 md:lil-pb-16" style={{color: '#388f80', marginTop: '6pc'}}>
-        <section className="lil-container lil-text-center">
+        <section className="lil-container lil-text-center" style={{maxWidth: 'fit-content'}}>
           <h1 className="lil-pt-8 lil-mt-1 lil-pb-6 lil-text-s-56 sm:lil-text-s-36 sm:lil-text-left sm:lil-w-3/4 md:lil-text-s-40" style={{  fontWeight: 'bold'}}>
-           One Compliance <span style={{color: 'rgba(0, 0, 0, 0.76)'}}>Documentation and User Guide</span>
+          <span style={{color: 'rgba(0, 0, 0, 0.76)'}}>Documentation and User Guide</span>
           </h1>
           <p className="lil-pb-12 sm:lil-pb-6 lil-mb-6 sm:lil-mb-3 sm:lil-pb-14 lil-text-base sm:lil-text-left">
             Tax and financial services software platform
           </p>
+          <button style={{color: 'white', backgroundColor: '#388f80', borderRadius:'10px' }}>
+                <a style={{textDecoration: 'none'}} target="_blank" href="./key_features" className="lil-btn lil-text-white lil-w-full lil-rounded-md" onclick="handleTrack({label: 'hero-button MaxITC', obj: this })">Get started</a>
+              </button>
+              <br/>
+              <br/>
           <div className="lil-flex sm:lil-flex-col lil-pt-8 lil-justify-between hero-product-cards">
             <div className="lil-px-6 lil-py-6 lil-relative sm:lil-w-full lil-flex lil-flex-col lil-justify-between card3 lil-w-1/3 lil-rounded-xxl">
               <img src="https://assets.clear.in/cleartax/images/1695378348_icon2.png" alt="" width={60} className="lil-ml-auto lil-mr-auto lil-absolute" style={{left: 0, right: 0, margin: 'auto', top: '-30px'}} />
@@ -90,9 +87,9 @@ export default function Docs() {
               <p className="on-hover grey-text lil-text-base lil-mt-auto lil-absolute lil-w-full lil-px-6 md:lil-px-0 md:lil-pt-6">
                 A new model of ITC management that helps businesses with high purchase complexity to increase efficiency of their working capital
               </p>
-              <button style={{color: 'white', backgroundColor: '#388f80', borderRadius:'10px' }}>
+              {/* <button style={{color: 'white', backgroundColor: '#388f80', borderRadius:'10px' }}>
                 <a target="_blank" className="lil-btn lil-text-white lil-w-full lil-rounded-md" onclick="handleTrack({label: 'hero-button MaxITC', obj: this })">See product</a>
-              </button>
+              </button> */}
             </div>
             <div className="lil-px-6 lil-py-6 lil-relative sm:lil-w-full lil-flex lil-flex-col lil-justify-between card2 lil-w-1/3 lil-rounded-xxl">
               <img src="https://assets.clear.in/cleartax/images/1695378321_group1814218634.png" alt="" width={60} className="lil-ml-auto lil-mr-auto lil-absolute" style={{left: 0, right: 0, margin: 'auto', top: '-30px'}} />
@@ -107,9 +104,9 @@ export default function Docs() {
               <p className="on-hover grey-text lil-text-base lil-mt-auto lil-absolute lil-w-full lil-px-6 md:lil-px-0 md:lil-pt-6">
                 Our connected finance ecosystem is enabling new paths to efficiency and profitability while ensuring 100% compliance.
               </p>
-              <button style={{color: 'white', backgroundColor: '#388f80', borderRadius:'10px' }}>
+              {/* <button style={{color: 'white', backgroundColor: '#388f80', borderRadius:'10px' }}>
                 <a target="_blank" className="lil-btn lil-text-white lil-w-full lil-rounded-md" onclick="handleTrack({label: 'hero-button MaxITC', obj: this })">See product</a>
-              </button>
+              </button> */}
             </div>
             <div className="lil-px-6 lil-py-6 lil-relative sm:lil-w-full lil-flex lil-flex-col lil-justify-between card1 lil-w-1/3 lil-rounded-xxl">
               <img src="https://assets.clear.in/cleartax/images/1695366152_group1814217655.png" alt="" width={60} className="lil-ml-auto lil-mr-auto lil-absolute" style={{left: 0, right: 0, margin: 'auto', top: '-30px'}} />
@@ -124,16 +121,16 @@ export default function Docs() {
               <p className="on-hover grey-text lil-text-base lil-mt-auto lil-absolute lil-w-full lil-px-6 md:lil-px-0 md:lil-pt-6">
                 Act promptly on missed tax deadlines – Revise your filing, file belated returns and even respond to received notices with ease.
               </p>
-              <button style={{color: 'white', backgroundColor: '#388f80', borderRadius:'10px' }}>
+              {/* <button style={{color: 'white', backgroundColor: '#388f80', borderRadius:'10px' }}>
                 <a target="_blank" className="lil-btn lil-text-white lil-w-full lil-rounded-md" onclick="handleTrack({label: 'hero-button MaxITC', obj: this })">See product</a>
-              </button>
+              </button> */}
             </div>
             
           </div>
         </section>
       </div>
     
-        <section className="section section-padding-top section-padding-bottom" data-section-idx={4} data-section-template="FH Section With Tab Buttons">
+        {/* <section className="section section-padding-top section-padding-bottom" data-section-idx={4} data-section-template="FH Section With Tab Buttons">
           <div className="container">
             <div className="mt-12" style={{marginTop: '80px', justifyContent: 'safe center', display: 'flex', flexDirection: 'column'}}>
               <ul aria-label="Key Benefits" className="nav" role="tablist" style={{textAlign: 'center !important', marginLeft: 'auto', marginRight: 'auto'}}>
@@ -148,7 +145,6 @@ export default function Docs() {
                   </a>
                 </li>
               </ul>
-              {/* Content Panels */}
               <div className="col-sm-12 mt-6 tab-content text-center" style={{textAlign: 'center !important', marginLeft: 'auto', marginRight: 'auto' , marginTop: '40px'}}><div aria-labelledby="id-e0fb4d3f900d" className="tab-pane fade active show focus" id="id-e441fdc87a20" role="tabpanel" style={{paddingRight: '10px', paddingLeft: '40px'}}>
                   <div className="form-markdown text-center" style={{float: 'center'}}><div className="col-sm-6 fh-content-panel" style={{float: 'left', textAlign: 'left', overflowWrap: 'break-word', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '4px', borderRadius: '10px', padding: '10px', margin: '0px'}}>
                       <p style={{fontWeight: 600, fontSize: '18px', lineHeight: '120%', color: '#388f80',}}>
@@ -248,8 +244,9 @@ export default function Docs() {
                   </div>
                 </div>
               </div>
-            </div>{/* if ns.tabs|length > 1 */}
-          </div></section>
+            </div>
+          </div>
+          </section> */}
 
           <hr></hr>
           <footer id="dk-footer" className="dk-footer">
@@ -295,7 +292,7 @@ export default function Docs() {
               </div>
               <div className="footer-awarad">
                 <img src="images/icon/best.png" alt="" />
-                <p>Best Design Company 2019</p>
+                <p>Best Design Company 2023</p>
               </div>
             </div>
             <div className="col-md-14 col-lg-8">
@@ -353,12 +350,6 @@ export default function Docs() {
                     </div>
                   </div>
              
-
-
-
-
-
-
                     <form action="#">
                       <div className="form-row">
                         <div className="col dk-footer-form">
@@ -376,33 +367,16 @@ export default function Docs() {
           </div>
         </div>
         <div className="copyright">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6">
-                <span>Copyright © 2019, All Right Reserved efeone</span>
-              </div>
-              {/* End Col */}
-              <div className="col-md-6">
-                <div className="copyright-menu">
-                  <ul>
-                    <li>
-                      <a href="#home">Home</a>
-                    </li>
-                    <li>
-                      <a href="#terms">Terms</a>
-                    </li>
-                    <li>
-                      <a href="#privacy">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="#contact">Contact</a>
-                    </li>
-                  </ul>
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-12">
+                    <span>Copyright © 2023, All Right Reserved efeone</span>
+                  </div>
+                  {/* End Col */}
+                  
                 </div>
               </div>
             </div>
-          </div>
-        </div>
         {/* End Back to top */}
       </footer>
 
