@@ -20,8 +20,6 @@ function App() {
 				<Route path='/doc' element={<Doc />} />
 				<Route path='/key_features' element={<KeyFeatures />} />
 				<Route path='/pricing' element={<Pricing />} />
-
-
 			</Routes>
 		</Router>
 	);

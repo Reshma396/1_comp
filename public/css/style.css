@@ -1,6 +1,6 @@
 
 
-/* Import Fonts & All CSS */
+/* All CSS */
 
 @import url(fonts/aileron-font-style.css);
 @import url(css/bootstrap.min.css);
@@ -10,7 +10,6 @@
 @import url(css/magnific-popup.css);
 @import url(css/font-awesome.min.css);
 @import url(css/style.css);
-/* :: 1.0 Reboot CSS */
 
 * {
     margin: 0;

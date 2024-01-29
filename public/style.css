@@ -1,5 +1,5 @@
 
-/* Import Fonts & All CSS */
+/* CSS */
 
 @import url(fonts/aileron-font-style.css);
 @import url(css/bootstrap.min.css);
@@ -9,7 +9,6 @@
 @import url(css/magnific-popup.css);
 @import url(css/font-awesome.min.css);
 @import url(css/style.css);
-/* :: 1.0 Reboot CSS */
 
 * {
     margin: 0;
@@ -28,7 +27,6 @@ h3,
 h4,
 h5,
 h6 {
-    /* font-family: "cursive"; */
     color: #303030;
     line-height: 1.4;
     font-weight: 600;
@@ -38,7 +36,6 @@ a,
 a:active,
 a:focus,
 a:hover {
-    /* font-family: "sans-serif"; */
     color: #303030;
     text-decoration: none;
     -webkit-transition-duration: 500ms;

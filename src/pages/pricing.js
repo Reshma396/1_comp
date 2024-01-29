@@ -41,7 +41,7 @@ export default function Pricing() {
                 </div>
                 <div className="classynav">
                   <ul id="nav"  style={{width: '23pc'}}>
-                    <li><a href="/index">About</a></li>
+                    <li><a href='/index'>About</a></li>
                     <li><a href='/pricing'>Pricing</a></li>
                     <li><a href='/doc'>Doc</a></li>
                     <li><a href='#dk-footer'>Contact Us</a></li>
